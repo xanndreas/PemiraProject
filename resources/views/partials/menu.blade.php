@@ -134,6 +134,16 @@
                     </a>
                 </li>
             @endcan
+            @can('tahapan_access')
+                <li class="nav-item">
+                    <a href="{{ route("admin.tahapans.index") }}" class="nav-link {{ request()->is('admin/tahapans') || request()->is('admin/tahapans/*') ? 'active' : '' }}">
+                        <i class="fa-fw fas fa-cogs nav-icon">
+
+                        </i>
+                        {{ trans('cruds.tahapan.title') }}
+                    </a>
+                </li>
+            @endcan
             @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
                 @can('profile_password_edit')
                     <li class="nav-item">

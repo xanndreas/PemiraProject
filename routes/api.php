@@ -25,4 +25,7 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
 
     // Data Pemilihans
     Route::apiResource('data-pemilihans', 'DataPemilihanApiController');
+
+    // Tahapans
+    Route::apiResource('tahapans', 'TahapanApiController');
 });

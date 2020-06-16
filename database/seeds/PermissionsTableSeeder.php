@@ -202,6 +202,26 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => '49',
+                'title' => 'tahapan_create',
+            ],
+            [
+                'id'    => '50',
+                'title' => 'tahapan_edit',
+            ],
+            [
+                'id'    => '51',
+                'title' => 'tahapan_show',
+            ],
+            [
+                'id'    => '52',
+                'title' => 'tahapan_delete',
+            ],
+            [
+                'id'    => '53',
+                'title' => 'tahapan_access',
+            ],
+            [
+                'id'    => '54',
                 'title' => 'profile_password_edit',
             ],
         ];

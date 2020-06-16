@@ -57,9 +57,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Data Pemilihans
     Route::delete('data-pemilihans/destroy', 'DataPemilihanController@massDestroy')->name('data-pemilihans.massDestroy');
     Route::resource('data-pemilihans', 'DataPemilihanController');
+
+    // Tahapans
+    Route::delete('tahapans/destroy', 'TahapanController@massDestroy')->name('tahapans.massDestroy');
+    Route::resource('tahapans', 'TahapanController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
-// Change password
+    // Change password
     if (file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php'))) {
         Route::get('password', 'ChangePasswordController@edit')->name('password.edit');
         Route::post('password', 'ChangePasswordController@update')->name('password.update');
